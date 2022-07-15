@@ -44,10 +44,10 @@ export default function UserList() {
       },
     },
   ];
-  
+
   return (
     <div className="userList" style={{ height: '100%', width: '100%' }}>
-              <DataGrid rows={data} columns={columns} pageSize={10} autoPageSize={true} checkboxSelection />
+      <DataGrid rows={data} columns={columns} pageSize={10} autoPageSize={true} checkboxSelection />
     </div>
   );
 }

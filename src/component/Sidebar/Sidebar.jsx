@@ -9,15 +9,15 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <h3 className="sidebar-menu__title">Dashboard</h3>
           <nav className="sidebar-menu__list">
-            <NavLink exact activeclassname="active" to="/" color="#555" className="sidebar-menu__list--item">
+            <NavLink exact="true" activeclassname="active" to="/" color="#555" className="sidebar-menu__list--item">
               <LineStyle />
               Home
             </NavLink>
-            <a exact  to="" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <Timeline />
               Analytics
             </a>
-            <a exact  to="" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <TrendingUp />
               Sales
             </a>
@@ -26,19 +26,19 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <h3 className="sidebar-menu__title">Quick Menu</h3>
           <nav className="sidebar-menu__list">
-            <NavLink exact activeclassname="active" to="/userlist" color="#555" className="sidebar-menu__list--item">
+            <NavLink exact="true" activeclassname="active" to="/userlist" color="#555" className="sidebar-menu__list--item">
               <PersonOutline />
               Users
             </NavLink>
-            <NavLink  to="/productlist" color="#555" className="sidebar-menu__list--item">
+            <NavLink to="/productlist" color="#555" className="sidebar-menu__list--item">
               <Storefront />
               Products
             </NavLink>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <AttachMoney />
               Transactions
             </a>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <BarChart />
               Report
             </a>
@@ -47,15 +47,15 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <h3 className="sidebar-menu__title">Notifications</h3>
           <nav className="sidebar-menu__list">
-            <NavLink exact  to="/notifications" color="#555" className="sidebar-menu__list--item">
+            <NavLink exact="true" to="/notifications" color="#555" className="sidebar-menu__list--item">
               <MailOutline />
               Mail
             </NavLink>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <DynamicFeed />
               Feedback
             </a>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <ChatBubbleOutline />
               Message
             </a>
@@ -64,15 +64,15 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <h3 className="sidebar-menu__title">Staff</h3>
           <nav className="sidebar-menu__list">
-            <NavLink exact activeclassname="active" to="/staff" color="#555" className="sidebar-menu__list--item">
+            <NavLink exact="true" activeclassname="active" to="/staff" color="#555" className="sidebar-menu__list--item">
               <WorkOutline />
               Manage
             </NavLink>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <Timeline />
               Analytics
             </a>
-            <a   to="/" color="#555" className="sidebar-menu__list--item">
+            <a color="#555" className="sidebar-menu__list--item">
               <Report />
               Sales
             </a>

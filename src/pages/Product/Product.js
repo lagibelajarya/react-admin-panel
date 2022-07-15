@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link , useParams} from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './product.scss';
 import Chart from '../../component/Chart/Chart';
 import { productData } from '../../DummyData';
 import { Publish } from '@mui/icons-material';
 
 export default function Product() {
+
+  const productId = useParams();
+  const [product , setproduct ] = useState(second)
   return (
     <div className="product">
       <div className="productTitleContainer">

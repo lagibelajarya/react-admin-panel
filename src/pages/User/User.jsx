@@ -1,10 +1,21 @@
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './user.scss';
 import UserList from '../UserList/UserList';
+import { useEffect, useState } from 'react';
+import { userRows } from '../../DummyData';
 
 export default function User(props) {
-  return (
+  const { userId } = useParams();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    let targetUser = userRows.find((row) => row.id == userId);
+    if (targetUser) {
+      setUser(targetUser);
+    }
+  }, []);
+  return user ? (
     <div className="user">
       <div className="user__title">
         <h1 className="user__title-text">Edit User</h1>
@@ -15,25 +26,25 @@ export default function User(props) {
       <div className="user__container">
         <div className="user__container-info">
           <div className="user__container-info__title">
-            <img src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="user__container-info__title--img" />
+            <img src={user.avatar} alt="" className="user__container-info__title--img" />
             <div className="user__container-info__title--name">
-              <span>Anna Becker</span>
-              <span>Software Engineer</span>
+              <span>{user.username}</span>
+              <span>{user.email}</span>
             </div>
           </div>
           <div className="userShowBottom">
-            <div className='userShowBottomAcount'>
+            <div className="userShowBottomAcount">
               <span className="userShowTitle">Account Details</span>
               <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
-                <span className="userShowInfoTitle">annabeck99</span>
+                <span className="userShowInfoTitle">{user.username}</span>
               </div>
               <div className="userShowInfo">
                 <CalendarToday className="userShowIcon" />
-                <span className="userShowInfoTitle">10.12.1999</span>
+                <span className="userShowInfoTitle">{user.transaction}</span>
               </div>
             </div>
-            <div className='userShowBottomContact'>
+            <div className="userShowBottomContact">
               <span className="userShowTitle">Contact Details</span>
               <div className="userShowInfo">
                 <PhoneAndroid className="userShowIcon" />
@@ -41,7 +52,7 @@ export default function User(props) {
               </div>
               <div className="userShowInfo">
                 <MailOutline className="userShowIcon" />
-                <span className="userShowInfoTitle">annabeck99@gmail.com</span>
+                <span className="userShowInfoTitle">{user.email}</span>
               </div>
               <div className="userShowInfo">
                 <LocationSearching className="userShowIcon" />
@@ -89,5 +100,7 @@ export default function User(props) {
         </div>
       </div>
     </div>
+  ) : (
+    <></>
   );
 }

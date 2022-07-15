@@ -1,0 +1,66 @@
+.userList {
+    flex: 4;
+  }
+  
+  .userListUser {
+    display: flex;
+    align-items: center;
+  }
+  
+  .userListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .userListEdit {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .userListDelete {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .MuiDataGrid-columnHeadersInner {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 50px repeat(6, 1fr);
+  }
+  .MuiDataGrid-columnHeader {
+    width: 100% !important;
+    max-width: unset !important;
+    min-width: unset !important;
+  }
+  .MuiDataGrid-columnHeaderTitleContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .MuiDataGrid-virtualScrollerRenderZone {
+    width: 100%;
+  }
+  .MuiDataGrid-row {
+    display: grid !important;
+    grid-template-columns: 50px repeat(6, 1fr);
+    width: 100% !important;
+    .MuiDataGrid-cell {
+      width: 100% !important;
+      max-width: unset !important;
+      min-width: unset !important;
+      justify-content: center !important;
+      &:last-child {
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+  

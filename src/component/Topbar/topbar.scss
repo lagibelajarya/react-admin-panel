@@ -1,0 +1,52 @@
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  .topbarWrapper {
+    height: inherit;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .topLeft {
+      font-size: 20px;
+      font-weight: 600;
+      color: violet;
+    }
+    .topRight {
+      height: max-content;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &-icon {
+        position: relative;
+        &__badge {
+          position: absolute;
+          top: -2px;
+          right: -2px;
+          background: orangered;
+          height: 13px;
+          width: 13px;
+          border-radius: 100%;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 7px;
+        }
+      }
+
+      &-profile {
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        background-position: 100%;
+        background-size: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.App{
+
+}
+
+.container{
+    display: flex;
+}
+.topbar{
+    
+}
+.sidebar{
+    flex: 1;
+}
+.content{
+    flex: 4;
+    
+}

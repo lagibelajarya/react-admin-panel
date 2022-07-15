@@ -1,0 +1,88 @@
+.widgetLg {
+  flex: 4;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  -webkit-box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  &-title {
+    font-size: 22px;
+    color: black;
+  }
+  &-table {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+
+    &-container {
+      overflow-y: auto;
+      height: 100%;
+      margin-top: 20px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &-header {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 20px 20px 0 20px;
+
+      &-th {
+        font-size: 16px;
+        font-weight: 600;
+
+        &:first-child {
+          text-align: start;
+        }
+      }
+    }
+    &-tr {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 20px;
+      align-items: center;
+      & > * {
+        text-align: center;
+      }
+      &-user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &-img {
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          background-position: 100%;
+          background-size: cover;
+        }
+        &-name {
+        }
+      }
+      &-date {
+      }
+      &-amount {
+      }
+      &-status {
+        &-btn {
+          padding: 5px 7px;
+          border: none;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.Approved {
+  background-color: #e5faf2;
+  color: #3bb077;
+}
+.Declined {
+  background-color: #fff0f1;
+  color: #d95087;
+}
+.Panding {
+  background-color: #ebf1fe;
+  color: #2a7ade;
+}
